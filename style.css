@@ -17,14 +17,19 @@ body {
 }
 .mobile-menu {
     width: 320px;
+    min-height: 95%;
     position: fixed;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+    padding: 1em 1.5em 2em 1.5em;
+    display: flex;
+    flex-direction: column;
+    
 }
 .mobile-menu__header {
     display: flex;
     align-items: center;
     gap: 1em;
-    padding: 1em 1em 3.5em 1em;
+    padding-bottom: 3.5em;
 }
 svg {
     cursor: pointer;
@@ -35,6 +40,13 @@ svg:nth-child(2) {
 .mobile-menu__header svg:last-child {
     margin-left: auto;
 }
+
+.mobile-menu .mobile-menu__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    flex-grow: 1;
+}
 .mobile-menu__highlight {
     height: 32px;
     width: 4px;
@@ -42,23 +54,56 @@ svg:nth-child(2) {
     transform: matrix(-1, 1, 0, 1, 0, 0);
     cursor: pointer;
     position: absolute;
+    margin-left: -1.5em;
 }
-.mobile-menu__nav {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-}
-.mobile-menu__nav button:first-child {
-    color: #7E7E82;
-}
-.mobile-menu__nav button {
-    margin-left: 2em;
+
+.mobile-menu__button {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #1B1C21;
     border: none; 
-    outline: none;
+    padding: 0;
     background-color: white;
     text-align: start;
+    font-family: "TT Lakes Demibold";
+    cursor: pointer;
+}
+.mobile-menu__button.button__active {
+    color: #7E7E82;
+}
+.mobile-menu__footer {
+    flex-shrink: 0;
+}
+.mobile-menu__footer div {
+    display: flex;
+    gap: 1em;
+}
+.mobile-menu__footer > span {
+    margin-top: 1em;
+    display: flex;
+    font-family: "TT Lakes Demibold";
+}
+.mobile-menu__footer > span:nth-child(3) {
+    font-family: "TT Lakes Bold";
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    margin-top: .5em;
+    margin-bottom: 2.5em;
+}
+.mobile-menu__footer div .change-language {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    border: none; 
+    padding: 0;
+    background-color: white;
+    text-align: start;
+    font-family: "TT Lakes Demibold";
+    cursor: pointer;
+}
+.mobile-menu__footer div .change-language.change-language__active {
+    color: #7E7E82;
 }
