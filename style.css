@@ -69,8 +69,15 @@ svg:nth-child(2) {
     font-family: "TT Lakes Demibold";
     cursor: pointer;
 }
+.mobile-menu__button:hover {
+    opacity: .7;
+}
+.mobile-menu__button:focus {
+    opacity: .3;
+}
 .mobile-menu__button.button__active {
     color: #7E7E82;
+    opacity: 1;
 }
 .mobile-menu__footer {
     flex-shrink: 0;
