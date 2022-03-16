@@ -43,11 +43,13 @@ svg {
 .menu__header > .menu__seacrh {
     margin-left: auto;
 }
-.mobile-menu .menu__nav {
+.mobile-menu .menu__nav ul{
     display: flex;
     flex-direction: column;
     gap: 2em;
-    flex-grow: 1;
+}
+.mobile-menu .menu__nav {
+    flex-grow: 1;   
 }
 .menu__button {
     font-size: 16px;
@@ -60,10 +62,10 @@ svg {
     font-family: "TT Lakes Demibold";
     cursor: pointer;
 }
-.menu__button:hover {
+.menu__button ul:hover {
     opacity: .7;
 }
-.menu__button:focus {
+.menu__button ul:focus {
     opacity: .3;
 }
 .menu__button.button__active {
