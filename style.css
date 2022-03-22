@@ -14,13 +14,26 @@ body {
     margin: 0;
     font-family: "TT Lakes Regular";
 }
+.overlay {
+    height: 100vh;
+    width: 100vh;
+    z-index: -1;
+    filter: blur(10px);
+    position: absolute;
+}
+.menu {
+    z-index: 2;
+    max-width: 320px;
+}
+.header__block {
+    margin-bottom: 3em;
+}
 .button {
     border: none;
     background-color: white;
     padding-left: 0;
 }
-.mobile-menu {
-    width: 320px;
+.menu-panel {
     min-height: 95%;
     position: fixed;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
@@ -28,11 +41,10 @@ body {
     display: flex;
     flex-direction: column;
 }
-.menu__header {
+.menu__header .header__block  {
     display: flex;
     align-items: center;
     gap: 1em;
-    padding-bottom: 3.5em;
 }
 svg {
     cursor: pointer;
@@ -43,12 +55,12 @@ svg {
 .menu__header > .menu__seacrh {
     margin-left: auto;
 }
-.mobile-menu .menu__nav ul{
+.menu-panel .menu__nav .menu__list{
     display: flex;
     flex-direction: column;
     gap: 2em;
 }
-.mobile-menu .menu__nav {
+.menu-panel .menu__nav {
     flex-grow: 1;   
 }
 .menu__button {
@@ -62,10 +74,10 @@ svg {
     font-family: "TT Lakes Demibold";
     cursor: pointer;
 }
-.menu__button ul:hover {
+.menu__list .menu__button:hover {
     opacity: .7;
 }
-.menu__button ul:focus {
+.menu__list .menu__button:focus {
     opacity: .3;
 }
 .menu__button.button__active {
@@ -84,11 +96,15 @@ svg {
 }
 .menu__footer .support__group {
     display: flex;
-    gap: .6em;
+    gap: .5em;
 }
-.menu__footer > span {
+.menu__footer > a {
     margin-top: 1em;
     display: flex;
+}
+.menu__footer .email_text {
+    color:black;
+    text-decoration: none;
     font-family: "TT Lakes Demibold";
 }
 .menu__footer .tel_text {
@@ -98,12 +114,14 @@ svg {
     letter-spacing: -0.6px;
     margin-top: .5em;
     margin-bottom: 2.5em;
+    color:black;
+    text-decoration: none;
 }
 .menu__footer .language {
     display: flex;
     padding: 0;
 }
-.menu__footer ul .change-language {
+.menu__foote .language .change-language {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
@@ -113,10 +131,10 @@ svg {
     font-family: "TT Lakes Demibold";
     cursor: pointer;
 }
-.menu__footer ul .change-language.change-language__active {
+.menu__footer .language .change-language.change-language__active {
     color: #7E7E82;
 }
-.resetting_ul {
+.reset-list {
     list-style-type: none;
     padding: 0;
 }
