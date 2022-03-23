@@ -24,7 +24,7 @@ body {
     z-index: 2;
     max-width: 320px;
 }
-.header__block {
+.menu__block {
     margin-bottom: 3em;
 }
 .button {
@@ -32,7 +32,7 @@ body {
     background-color: white;
     padding-left: 0;
 }
-.menu-panel {
+.menu__panel {
     min-height: 95%;
     position: fixed;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
@@ -54,12 +54,12 @@ svg {
 .menu__header > .menu__seacrh {
     margin-left: auto;
 }
-.menu-panel .menu__nav .menu__list{
+.menu__panel .menu__nav .menu__list{
     display: flex;
     flex-direction: column;
     gap: 2em;
 }
-.menu-panel .menu__nav {
+.menu__panel .menu__nav {
     flex-grow: 1;   
 }
 .menu__button {
