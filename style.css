@@ -120,7 +120,7 @@ svg {
     display: flex;
     padding: 0;
 }
-.menu__foote .language .change-language {
+.menu__footer .language .change-language {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
